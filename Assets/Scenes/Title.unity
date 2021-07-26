@@ -281,6 +281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686842746}
+  - component: {fileID: 686842747}
   m_Layer: 0
   m_Name: TitleManager
   m_TagString: Untagged
@@ -302,6 +303,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &686842747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686842745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67dd9581a20c13a4e9114e483f785ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1063899218
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +788,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7150421856423063891, guid: 0f30bf0cb890ab848bf8684d1807e717,
+        type: 3}
+      propertyPath: m_LoadTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150421856423063891, guid: 0f30bf0cb890ab848bf8684d1807e717,
+        type: 3}
+      propertyPath: fadeSpeedValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7150421856423063892, guid: 0f30bf0cb890ab848bf8684d1807e717,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -904,5 +927,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8977752290684443749, guid: 7413eca5c672c614da29a34cb696f08e,
+        type: 3}
+      propertyPath: m_ses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977752290684443749, guid: 7413eca5c672c614da29a34cb696f08e,
+        type: 3}
+      propertyPath: m_ses.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74b32b88b8f31284aa4e72972caf106c, type: 3}
+    - target: {fileID: 8977752290684443749, guid: 7413eca5c672c614da29a34cb696f08e,
+        type: 3}
+      propertyPath: m_ses.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bb4ba8d3e2d3384e92a69adc680116d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7413eca5c672c614da29a34cb696f08e, type: 3}

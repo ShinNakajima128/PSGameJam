@@ -119,11 +119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_titleScene: Title
-  m_easyScene: 
+  m_easyScene: Main
   m_normalScene: 
   m_hardScene: 
   m_stageScenes: []
-  m_resultScene: 
+  m_resultScene: Result
   m_LoadTimer: 1
   fadeImage: {fileID: 7150421856246684231}
   fadeSpeedValue: 1
