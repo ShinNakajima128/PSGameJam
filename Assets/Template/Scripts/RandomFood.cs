@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class RandomFood : MonoBehaviour
 {
     public Sprite[] sprite;
+    public Image image;
 
 
     void Start()
@@ -14,7 +15,7 @@ public class RandomFood : MonoBehaviour
     }
     void RandomImage()
     {
-        var image = GetComponent<Image>();//このオブジェクトにくっ付いてるImageの取得
+        image = GetComponent<Image>();//このオブジェクトにくっ付いてるImageの取得
         image.sprite = sprite[Random.Range(0, sprite.Length)];//配列からランダムに画像指定
     }
 }

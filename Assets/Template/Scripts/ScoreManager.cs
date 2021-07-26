@@ -33,7 +33,6 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
             TotalScore = 0;
             TotalLoss = 0;
         }
-
         TotalScore = 2000;
         TotalLoss = 500;
     }

@@ -40,45 +40,51 @@ public class Sozaimaneger : MonoBehaviour
         {
             kyakuclasssozai = managementscript.rarmen1.GetSozai();
             kyakuclassmoney = managementscript.rarmen1.GetNoney();
-            kyakuclasssozai.Sort();
+            //kyakuclasssozai.Sort();
         }
         else if (kyaku.name == "kare-")
         {
             kyakuclasssozai = managementscript.carry1.GetSozai();
             kyakuclassmoney = managementscript.carry1.GetNoney();
-            kyakuclasssozai.Sort();
+            //kyakuclasssozai.Sort();
         }
         else if (kyaku.name == "susi")
         {
             kyakuclasssozai = managementscript.susi1.GetSozai();
             kyakuclassmoney = managementscript.susi1.GetNoney();
-            kyakuclasssozai.Sort();
+            //kyakuclasssozai.Sort();
         }
         else if (kyaku.name == "gyudon")
         {
             kyakuclasssozai = managementscript.gyudon1.GetSozai();
             kyakuclassmoney = managementscript.gyudon1.GetNoney();
-            kyakuclasssozai.Sort();
+            //kyakuclasssozai.Sort();
         }
         else if (kyaku.name == "yakizakanateisyoku")
         {
             kyakuclasssozai = managementscript.Yakizakana1.GetSozai();
             kyakuclassmoney = managementscript.Yakizakana1.GetNoney();
-            kyakuclasssozai.Sort();
+           // kyakuclasssozai.Sort();
         }
 
         if (Input.GetMouseButtonDown(0))
         {
 
-            clickedGameObject = null;
+            //clickedGameObject = null;
 
-            clickedGameObjectsprite = clickedGameObject.GetComponent<Sprite>();
+            
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit2d = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
-            if (hit2d && gameObject.tag != "Villain" && gameObject.transform.parent.name != "toree")
+            if (hit2d.collider)
             {
+                clickedGameObject = hit2d.collider.gameObject;
+
+                //if (clickedGameObject.gameObject.tag != "Villain" && clickedGameObject.transform.parent.name != "toree")
+                if (clickedGameObject.gameObject.tag != "Villain")
+                    clickedGameObjectsprite = clickedGameObject.GetComponent<Sprite>();
+
                 sozai.Add(clickedGameObjectsprite);
                 for (int i = 0; i < kyakuclasssozai.Count; i++)
                 {
@@ -116,7 +122,7 @@ public class Sozaimaneger : MonoBehaviour
                         clickedGameObject.transform.parent = toree.transform;
                     }
                 }
-                sozai.Sort();
+                //sozai.Sort();
                 if (sozai == kyakuclasssozai)
                 {
                     ScoreManager.Instance.TotalScore += kyakuclassmoney;

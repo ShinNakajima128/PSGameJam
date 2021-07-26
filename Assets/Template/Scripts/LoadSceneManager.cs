@@ -47,7 +47,7 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         alfa = 1;
         SetAlfa();

@@ -50,30 +50,14 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
 
     private void Start()
     {
-        //if (Instance != null)
-        //{
-        //    SceneManager.sceneLoaded += OnSceneLoaded;
-        //    if (SceneManager.GetActiveScene().name == "Title")
-        //    {
-        //        PlayBgmByName("Title");
-        //    }
-        //    else if (SceneManager.GetActiveScene().name == "")
-        //    {
-        //        PlayBgmByName("");
-        //    }
-        //    else if (SceneManager.GetActiveScene().name == "")
-        //    {
-        //        PlayBgmByName("");
-        //    }
-        //    else if (SceneManager.GetActiveScene().name == "")
-        //    {
-        //        PlayBgmByName("");
-        //    }
-        //    else if (SceneManager.GetActiveScene().name == "")
-        //    {
-        //        PlayBgmByName("");
-        //    }
-        //}  
+        if (Instance != null)
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            if (SceneManager.GetActiveScene().name == "GameScene")
+            {
+                PlayBgmByName("Main");
+            }
+        }
     }
 
     /// <summary>
@@ -85,24 +69,16 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     {
         if (Instance != null)
         {
-            //switch (SceneManager.GetActiveScene().name)
-            //{
-            //    case "Title":
-            //        PlayBgmByName("Title");
-            //        break;
-            //    //case "":
-            //    //    PlayBgmByName("");
-            //    //    break;
-            //    //case "":
-            //    //    PlayBgmByName("");
-            //    //    break;
-            //    //case "":
-            //    //    PlayBgmByName("");
-            //    //    break;
-            //    //case "":
-            //    //    PlayBgmByName("");
-            //    //    break;
-            //}
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "GameScene":
+                    PlayBgmByName("Main");
+                    break;
+                case "Result":
+                    StopBgm();
+                    PlaySeByName("Finish");
+                    break;
+            }
         } 
     }
 

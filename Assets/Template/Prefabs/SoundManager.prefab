@@ -172,11 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b49548202761374c95dbd4b3544cc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bgms: []
+  m_bgms:
+  - {fileID: 8300000, guid: 2be3161a16ee82445820e9a0915311b2, type: 3}
   m_ses:
   - {fileID: 8300000, guid: 74b32b88b8f31284aa4e72972caf106c, type: 3}
   - {fileID: 8300000, guid: 9bb4ba8d3e2d3384e92a69adc680116d, type: 3}
   - {fileID: 8300000, guid: b5b7fa5d40670a9448c0a47c1a1e5794, type: 3}
+  - {fileID: 8300000, guid: 10d6c9675fc9c474cb329e22dfbba814, type: 3}
   m_bgmAudioSource: {fileID: 8977752290963122873}
   m_seAudioSource: {fileID: 8977752289717664395}
 --- !u!1 &8977752290963122872

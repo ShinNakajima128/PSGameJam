@@ -48,7 +48,7 @@ public class VillainController : MonoBehaviour
 
             if (m_limitSlider.value <= 0 && !isDowned)
             {
-                ScoreManager.Instance.TotalScore -= m_stealMoney;
+                ScoreManager.Instance.TotalLoss += m_stealMoney;
                 m_stealMessage.SetActive(true);
                 m_alert.SetActive(false);
                 m_isTimeOut = true;
