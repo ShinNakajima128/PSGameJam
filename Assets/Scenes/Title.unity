@@ -344,7 +344,7 @@ RectTransform:
   m_GameObject: {fileID: 1063899218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 442986603}
   m_RootOrder: 2
@@ -389,7 +389,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3831d12175957bf4ea5bc289d691f7e0, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -714,7 +714,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3831d12175957bf4ea5bc289d691f7e0, type: 3}
     m_FontSize: 229
     m_FontStyle: 0
     m_BestFit: 0
@@ -808,6 +808,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7150421856246684231, guid: 0f30bf0cb890ab848bf8684d1807e717,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7150421856423063891, guid: 0f30bf0cb890ab848bf8684d1807e717,
         type: 3}
       propertyPath: m_LoadTimer
@@ -882,6 +887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LoadSceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150421856575398378, guid: 0f30bf0cb890ab848bf8684d1807e717,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f30bf0cb890ab848bf8684d1807e717, type: 3}
