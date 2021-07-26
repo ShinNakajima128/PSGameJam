@@ -86,15 +86,8 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
            
         }   
     }
-
-    /// <summary> Transition to the next Scene </summary>
-    public void LoadNextStage(string name)
-    {
-        isFadeOut = true;
-        StartCoroutine(LoadScene(name, m_LoadTimer));
-    }
    
-    /// <summary> Transition to the TitleScene </summary>
+    /// <summary> タイトルSceneに遷移する </summary>
     public void LoadTitleScene()
     {
         Time.timeScale = 1f;
@@ -102,19 +95,24 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
         StartCoroutine(LoadScene(m_titleScene, m_LoadTimer));
     }
     
-    /// <summary> Transition to the  AnyScene </summary>
+    /// <summary> 任意のSceneに遷移する </summary>
     public void AnyLoadScene(string loadScene)
     {
         isFadeOut = true;
         StartCoroutine(LoadScene(loadScene, m_LoadTimer));
     }
 
-
+    /// <summary>
+    /// リスタート
+    /// </summary>
     public void Restart()
     {
         isFadeOut = true;
         StartCoroutine(LoadScene(m_currentScene, m_LoadTimer));
     }
+    /// <summary>
+    /// クレジット
+    /// </summary>
     public void LoadCredit()
     {
         isFadeOut = true;
@@ -122,7 +120,7 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
     }
 
     /// <summary>
-    /// Quit the game
+    /// ゲームを終了する
     /// </summary>
     public void QuitGame()
     {
