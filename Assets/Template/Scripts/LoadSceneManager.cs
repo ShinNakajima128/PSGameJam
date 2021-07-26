@@ -95,11 +95,47 @@ public class LoadSceneManager : SingletonMonoBehaviour<LoadSceneManager>
         StartCoroutine(LoadScene(m_titleScene, m_LoadTimer));
     }
     
+    /// <summary>
+    /// イージーStageに遷移する
+    /// </summary>
+    public void LoadEasyScene()
+    {
+        isFadeOut = true;
+        StartCoroutine(LoadScene(m_easyScene, m_LoadTimer));
+    }
+
+    /// <summary>
+    /// ノーマルStageに遷移する
+    /// </summary>
+    public void LoadNormalScene()
+    {
+        isFadeOut = true;
+        StartCoroutine(LoadScene(m_easyScene, m_LoadTimer));
+    }
+
+    /// <summary>
+    /// ハードStageに遷移する
+    /// </summary>
+    public void LoadHardScene()
+    {
+        isFadeOut = true;
+        StartCoroutine(LoadScene(m_easyScene, m_LoadTimer));
+    }
+
     /// <summary> 任意のSceneに遷移する </summary>
     public void AnyLoadScene(string loadScene)
     {
         isFadeOut = true;
         StartCoroutine(LoadScene(loadScene, m_LoadTimer));
+    }
+
+    /// <summary>
+    /// リザルト
+    /// </summary>
+    public void Result()
+    {
+        isFadeOut = true;
+        StartCoroutine(LoadScene(m_resultScene, m_LoadTimer));
     }
 
     /// <summary>
