@@ -7,6 +7,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 {
     /// <summary> 合計スコア </summary>
     public int TotalScore { get; set; }
+    public int TotalLoss { get; set; }
 
     void Awake()
     {
@@ -25,11 +26,16 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
         if (SceneManager.GetActiveScene().name == "Title")
         {
             TotalScore = 0;
+            TotalLoss = 0;
         }
         else if (SceneManager.GetActiveScene().name == "GameScene")
         {
             TotalScore = 0;
+            TotalLoss = 0;
         }
+
+        TotalScore = 2000;
+        TotalLoss = 500;
     }
 
     void OnSceneLoaded(Scene nextScene, LoadSceneMode mode)
@@ -37,10 +43,12 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
         if (SceneManager.GetActiveScene().name == "Title")
         {
             TotalScore = 0;
+            TotalLoss = 0;
         }
         else if (SceneManager.GetActiveScene().name == "GameScene")
         {
             TotalScore = 0;
+            TotalLoss = 0;
         }
     }
 }
