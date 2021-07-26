@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     public GameObject m_ObjectSlider;
     [SerializeField] float m_Timer = 1;
     int m_Time = 0;
+    bool a = false;
 
     [SerializeField] GameObject m_GameEnd;
 
@@ -27,11 +28,12 @@ public class Timer : MonoBehaviour
         m_Slider.value = m_Timer;
         m_Timer -= Time.deltaTime;
 
-        if (m_Timer < m_Time)
+        if (m_Timer < m_Time && !a)
         {
             m_Timer = 0;
             m_GameEnd.SetActive(true);
             StartCoroutine(LoadScene());
+            a = true;
         }
     }
 
