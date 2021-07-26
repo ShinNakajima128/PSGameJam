@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 5074728585154401281}
   - component: {fileID: 5074728585154401280}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,6 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5074728585753818213}
   - component: {fileID: 5074728585753818212}
+  - component: {fileID: 3054462275346675896}
   m_Layer: 0
   m_Name: Hyougara
   m_TagString: Untagged
@@ -349,3 +350,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3054462275346675896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074728585753818215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0840365c5a6662042a9a4d517d3b477e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timer: 10

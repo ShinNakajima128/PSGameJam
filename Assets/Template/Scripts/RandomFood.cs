@@ -7,6 +7,7 @@ public class RandomFood : MonoBehaviour
 {
     public Sprite[] sprite;
 
+
     void Start()
     {
         RandomImage();
