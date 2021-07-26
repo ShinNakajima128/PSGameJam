@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - sozai
+  - gyudon
+  - kare-
+  - men
+  - niku
+  - nori
+  - ra-men
+  - raisu
+  - ru-
+  - sakana
+  - susi
+  - yakizakana
+  - food
   layers:
   - Default
   - TransparentFX
