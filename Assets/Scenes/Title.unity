@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 1063899222}
   - component: {fileID: 1063899221}
   - component: {fileID: 1063899220}
+  - component: {fileID: 1063899223}
   m_Layer: 5
   m_Name: PressAnyKeyText
   m_TagString: Untagged
@@ -409,6 +410,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063899218}
   m_CullTransparentMesh: 0
+--- !u!95 &1063899223
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063899218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 19b320a78168dc7489a17b0cfd07e683, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1284329454
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeSpeedValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150421856423063891, guid: 0f30bf0cb890ab848bf8684d1807e717,
+        type: 3}
+      propertyPath: m_easyScene
+      value: GameScene
       objectReference: {fileID: 0}
     - target: {fileID: 7150421856423063892, guid: 0f30bf0cb890ab848bf8684d1807e717,
         type: 3}
