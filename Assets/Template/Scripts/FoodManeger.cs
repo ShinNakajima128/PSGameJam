@@ -12,31 +12,35 @@ public class FoodManeger : MonoBehaviour
     [SerializeField] int susi_money;
     [SerializeField] int yakizalanateisyoku_money;
     [SerializeField] int gyudon_money;
-
+    public Cary carry1;
+    public Rarmen rarmen1;
+    public Susi susi1;
+    public Yakizakanateisyoku Yakizakana1;
+    public Gyudon gyudon1;
 
     void Start()
     {
 
         for (int i = 0; i < food.Length; i++)
         {
-            if(gameObject.tag == "kare-")
+            if (gameObject.tag == "kare-")
             {
-                Cary carry1 = new Cary();
-                carry1.money = cary_money ;
-                var ruu = GameObject.FindGameObjectWithTag("ru-");
-                var rice = GameObject.FindGameObjectWithTag("raisu");
-                var niku = GameObject.FindGameObjectWithTag("niku");
-                carry1.sozai.Add(ruu) ;
+                carry1 = new Cary();
+                carry1.money = cary_money;
+                var ruu = GameObject.FindGameObjectWithTag("ru-").GetComponent<Sprite>();
+                var rice = GameObject.FindGameObjectWithTag("raisu").GetComponent<Sprite>();
+                var niku = GameObject.FindGameObjectWithTag("niku").GetComponent<Sprite>();
+                carry1.sozai.Add(ruu);
                 carry1.sozai.Add(rice);
                 carry1.sozai.Add(niku);
             }
-            else if(gameObject.tag == "ra-men")
+            else if (gameObject.tag == "ra-men")
             {
                 Rarmen rarmen1 = new Rarmen();
                 rarmen1.money = rarmen_money;
-                var men = GameObject.FindGameObjectWithTag("men");
-                var nori = GameObject.FindGameObjectWithTag("nori");
-                var niku = GameObject.FindGameObjectWithTag("niku");
+                var men = GameObject.FindGameObjectWithTag("men").GetComponent<Sprite>();
+                var nori = GameObject.FindGameObjectWithTag("nori").GetComponent<Sprite>();
+                var niku = GameObject.FindGameObjectWithTag("niku").GetComponent<Sprite>();
                 rarmen1.sozai.Add(men);
                 rarmen1.sozai.Add(nori);
                 rarmen1.sozai.Add(niku);
@@ -45,9 +49,9 @@ public class FoodManeger : MonoBehaviour
             {
                 Susi susi1 = new Susi();
                 susi1.money = susi_money;
-                var sakana = GameObject.FindGameObjectWithTag("sakana");
-                var raisu = GameObject.FindGameObjectWithTag("raisu");
-                var nori = GameObject.FindGameObjectWithTag("nori");
+                var sakana = GameObject.FindGameObjectWithTag("sakana").GetComponent<Sprite>();
+                var raisu = GameObject.FindGameObjectWithTag("raisu").GetComponent<Sprite>();
+                var nori = GameObject.FindGameObjectWithTag("nori").GetComponent<Sprite>();
                 susi1.sozai.Add(sakana);
                 susi1.sozai.Add(raisu);
                 susi1.sozai.Add(nori);
@@ -56,8 +60,8 @@ public class FoodManeger : MonoBehaviour
             {
                 Yakizakanateisyoku Yakizakana1 = new Yakizakanateisyoku();
                 Yakizakana1.money = yakizalanateisyoku_money;
-                var sakana = GameObject.FindGameObjectWithTag("sakana");
-                var raisu = GameObject.FindGameObjectWithTag("raisu");
+                var sakana = GameObject.FindGameObjectWithTag("sakana").GetComponent<Sprite>();
+                var raisu = GameObject.FindGameObjectWithTag("raisu").GetComponent<Sprite>();
                 Yakizakana1.sozai.Add(sakana);
                 Yakizakana1.sozai.Add(raisu);
             }
@@ -65,93 +69,91 @@ public class FoodManeger : MonoBehaviour
             {
                 Gyudon gyudon1 = new Gyudon();
                 gyudon1.money = gyudon_money;
-                var niku = GameObject.FindGameObjectWithTag("niku");
-                var raisu = GameObject.FindGameObjectWithTag("raisu");
+                var niku = GameObject.FindGameObjectWithTag("niku").GetComponent<Sprite>();
+                var raisu = GameObject.FindGameObjectWithTag("raisu").GetComponent<Sprite>();
                 gyudon1.sozai.Add(niku);
                 gyudon1.sozai.Add(raisu);
             }
         }
     }
+}
 
-    public class Rarmen
+public class Rarmen
+{
+    public List<Sprite> sozai = new List<Sprite>();
+    public int money;
+
+    public List<Sprite> GetSozai()
     {
-        public List<GameObject> sozai = new List<GameObject>();
-        public int money;
-
-        public List<GameObject> GetSozai()
-        {
-            return sozai;
-        }
-
-        public int GetNoney()
-        {
-            return money;
-        }
+        return sozai;
     }
 
-    public class Cary
+    public int GetNoney()
     {
-        public List<GameObject> sozai = new List<GameObject>();
-        public int money;
+        return money;
+    }
+}
 
-        public List<GameObject> GetSozai()
-        {
-            return sozai;
-        }
+public class Cary
+{
+    public List<Sprite> sozai = new List<Sprite>();
+    public int money;
 
-        public int GetNoney()
-        {
-            return money;
-        }
+    public List<Sprite> GetSozai()
+    {
+        return sozai;
     }
 
-    public class Susi
+    public int GetNoney()
     {
-        public List<GameObject> sozai = new List<GameObject>();
-        public int money;
+        return money;
+    }
+}
 
-        public List<GameObject> GetSozai()
-        {
-            return sozai;
-        }
+public class Susi
+{
+    public List<Sprite> sozai = new List<Sprite>();
+    public int money;
 
-        public int GetNoney()
-        {
-            return money;
-        }
+    public List<Sprite> GetSozai()
+    {
+        return sozai;
     }
 
-    public class Yakizakanateisyoku
+    public int GetNoney()
     {
-        public List<GameObject> sozai = new List<GameObject>();
-        public int money;
+        return money;
+    }
+}
 
-        public List<GameObject> GetSozai()
-        {
-            return sozai;
-        }
+public class Yakizakanateisyoku
+{
+    public List<Sprite> sozai = new List<Sprite>();
+    public int money;
 
-        public int GetNoney()
-        {
-            return money;
-        }
+    public List<Sprite> GetSozai()
+    {
+        return sozai;
     }
 
-    public class Gyudon
+    public int GetNoney()
     {
-        public List<GameObject> sozai = new List<GameObject>();
-        public int money;
+        return money;
+    }
+}
 
-        public List<GameObject> GetSozai()
-        {
-            return sozai;
-        }
+public class Gyudon
+{
+    public List<Sprite> sozai = new List<Sprite>();
+    public int money;
 
-        public int GetNoney()
-        {
-            return money;
-        }
+    public List<Sprite> GetSozai()
+    {
+        return sozai;
     }
 
-
+    public int GetNoney()
+    {
+        return money;
+    }
 }
