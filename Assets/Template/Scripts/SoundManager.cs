@@ -154,19 +154,19 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         m_seAudioSource.clip = null;
     }
 
-    public void MasterVolChange()
-    {
-        m_masterVolume = GameObject.FindGameObjectWithTag("Master").GetComponent<Slider>().value;
-        Debug.Log(m_masterVolume);
-    }
-    public void BGMVolChange()
-    {
-        m_bgmVolume = GameObject.FindGameObjectWithTag("BGM").GetComponent<Slider>().value;
-        Debug.Log(m_bgmVolume);
-    }
-    public void SEVolChange()
-    {
-        m_seVolume = GameObject.FindGameObjectWithTag("SE").GetComponent<Slider>().value;
-        Debug.Log(m_seVolume);
-    }
+    //public void MasterVolChange()
+    //{
+    //    m_masterVolume = GameObject.FindGameObjectWithTag("Master").GetComponent<Slider>().value;
+    //    Debug.Log(m_masterVolume);
+    //}
+    //public void BGMVolChange()
+    //{
+    //    m_bgmVolume = GameObject.FindGameObjectWithTag("BGM").GetComponent<Slider>().value;
+    //    Debug.Log(m_bgmVolume);
+    //}
+    //public void SEVolChange()
+    //{
+    //    m_seVolume = GameObject.FindGameObjectWithTag("SE").GetComponent<Slider>().value;
+    //    Debug.Log(m_seVolume);
+    //}
 }
