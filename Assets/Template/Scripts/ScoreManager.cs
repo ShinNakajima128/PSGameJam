@@ -55,7 +55,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 
     private void Update()
     {
-        m_totalScoreText.text = "売上：　" + TotalScore.ToString() + "円";
+        m_totalScoreText.text = "売上額：　" + TotalScore.ToString() + "円";
         m_totalLossText.text = "損失額：　" + TotalLoss.ToString() + "円";
     }
 }

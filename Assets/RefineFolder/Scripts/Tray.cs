@@ -105,12 +105,8 @@ public class Tray : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < gyudonStuffIndex.Count; i++)
-            {
-                Debug.Log(m_trayIndexList[i]);
-                Debug.Log(gyudonStuffIndex[i]);
-            }
-            Debug.Log("調理できませんでした");
+
+            SoundManager.Instance.PlaySeByName("Failure");
             ScoreManager.Instance.TotalLoss += m_totalCost;
             ResetStuff();
             
@@ -126,6 +122,8 @@ public class Tray : MonoBehaviour
 
     public void ResetTray()
     {
+        SoundManager.Instance.PlaySeByName("Steal");
+
         m_trayState = TrayState.None;
 
         if (CookedFood) 

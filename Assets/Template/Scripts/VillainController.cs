@@ -12,7 +12,8 @@ public class VillainController : MonoBehaviour
     [SerializeField] GameObject m_stealMessage = default;
     [SerializeField] GameObject m_downMessage = default;
     [SerializeField] int m_villainHp = 10;
-    SpriteRenderer m_villain;
+    [SerializeField] GameObject m_villain = default;
+    //SpriteRenderer m_villain;
 
     float m_timer;
     bool isDowned = false;
@@ -20,7 +21,7 @@ public class VillainController : MonoBehaviour
 
     void Start()
     {
-        m_villain = GetComponent<SpriteRenderer>();
+        //m_villain = GetComponent<SpriteRenderer>();
         m_Arrested.SetActive(false);
         m_stealMessage.SetActive(false);
         m_downMessage.SetActive(false);
@@ -38,16 +39,19 @@ public class VillainController : MonoBehaviour
 
             if (isDowned)
             {
+                SoundManager.Instance.PlaySeByName("Down");
                 m_isTimeOut = true;
                 m_downMessage.SetActive(true);
                 m_Arrested.SetActive(true);
-                m_villain.enabled = false;
+                m_villain.SetActive(false);
+                //m_villain.enabled = false;
                 m_alert.SetActive(false);
                 StartCoroutine(DelayDestroy());
             }
 
             if (m_limitSlider.value <= 0 && !isDowned)
             {
+                SoundManager.Instance.PlaySeByName("Steal");
                 ScoreManager.Instance.TotalLoss += m_stealMoney;
                 m_stealMessage.SetActive(true);
                 m_alert.SetActive(false);
@@ -56,21 +60,27 @@ public class VillainController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit2D hit = Physics2D.Raycast((Vector2)ray.origin, (Vector2)ray.direction);
 
-            if (hit.collider)
-            {
-                if (hit.collider.gameObject.name == "Villain")
-                {
-                    Debug.Log(m_villainHp);
-                    m_villainHp--;
-                }
-            }
+        //    if (hit.collider)
+        //    {
+        //        if (hit.collider.gameObject.name == "Villain")
+        //        {
+        //            Debug.Log(m_villainHp);
+        //            m_villainHp--;
+        //        }
+        //    }
             
-        }
+        //}
+    }
+
+    public void DamageVillain()
+    {
+        SoundManager.Instance.PlaySeByName("Damage");
+        m_villainHp--;
     }
 
     IEnumerator DelayDestroy()

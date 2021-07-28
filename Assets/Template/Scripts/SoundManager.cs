@@ -17,7 +17,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
 {
     public static float m_masterVolume = 1.0f;
     public static float m_bgmVolume = 0.1f;
-    public static float m_seVolume = 0.6f;
+    public static float m_seVolume = 0.7f;
     [SerializeField] AudioClip[] m_bgms = null;
     [SerializeField] AudioClip[] m_ses = null;
     [SerializeField] AudioSource m_bgmAudioSource = null;
