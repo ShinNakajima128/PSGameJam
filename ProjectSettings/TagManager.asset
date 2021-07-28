@@ -18,6 +18,11 @@ TagManager:
   - yakizakana
   - food
   - Villain
+  - Ramen
+  - Curry
+  - Gyudon
+  - Sushi
+  - Fishset
   layers:
   - Default
   - TransparentFX
