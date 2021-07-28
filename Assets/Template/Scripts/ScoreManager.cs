@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 {
+    [SerializeField] Text m_totalScoreText = default;
+    [SerializeField] Text m_totalLossText = default;
+
     /// <summary> 合計スコア </summary>
     public int TotalScore { get; set; }
     public int TotalLoss { get; set; }
@@ -47,5 +51,11 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
             TotalScore = 0;
             TotalLoss = 0;
         }
+    }
+
+    private void Update()
+    {
+        m_totalScoreText.text = "売上：　" + TotalScore.ToString() + "円";
+        m_totalLossText.text = "損失額：　" + TotalLoss.ToString() + "円";
     }
 }

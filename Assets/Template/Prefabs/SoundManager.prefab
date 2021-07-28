@@ -179,6 +179,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9bb4ba8d3e2d3384e92a69adc680116d, type: 3}
   - {fileID: 8300000, guid: b5b7fa5d40670a9448c0a47c1a1e5794, type: 3}
   - {fileID: 8300000, guid: 10d6c9675fc9c474cb329e22dfbba814, type: 3}
+  - {fileID: 8300000, guid: e3b52f74c5fdfb34fbb67cdcadfb56ab, type: 3}
   m_bgmAudioSource: {fileID: 8977752290963122873}
   m_seAudioSource: {fileID: 8977752289717664395}
 --- !u!1 &8977752290963122872

@@ -17,7 +17,7 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
 {
     public static float m_masterVolume = 1.0f;
     public static float m_bgmVolume = 0.1f;
-    public static float m_seVolume = 1.0f;
+    public static float m_seVolume = 0.6f;
     [SerializeField] AudioClip[] m_bgms = null;
     [SerializeField] AudioClip[] m_ses = null;
     [SerializeField] AudioSource m_bgmAudioSource = null;
@@ -57,6 +57,10 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
             {
                 PlayBgmByName("Main");
             }
+            //else if (SceneManager.GetActiveScene().name == "RefineScene")
+            //{
+            //    PlayBgmByName("Main");
+            //}
         }
     }
 
@@ -74,6 +78,9 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
                 case "GameScene":
                     PlayBgmByName("Main");
                     break;
+                //case "RefineScene":
+                //    PlayBgmByName("Main");
+                //    break;
                 case "Result":
                     StopBgm();
                     PlaySeByName("Finish");
