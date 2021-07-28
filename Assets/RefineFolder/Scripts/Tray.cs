@@ -32,7 +32,7 @@ public class Tray : MonoBehaviour
     List<int> fishsetStuffIndex;
     List<int> gyudonStuffIndex;
     List<int> sushiStuffIndex;
-    GameObject CookedFood;
+    public GameObject CookedFood;
 
     private void Start()
     {
@@ -65,6 +65,7 @@ public class Tray : MonoBehaviour
 
         if (m_trayIndexList.SequenceEqual(ramenStuffIndex))
         {
+            m_trayState = TrayState.Ramen;
             var ramen = Instantiate(m_ramen);
             CookedFood = ramen;
             ramen.transform.position = m_foodPosision2.position;
@@ -72,6 +73,7 @@ public class Tray : MonoBehaviour
         }
         else if (m_trayIndexList.SequenceEqual(curryStuffIndex))
         {
+            m_trayState = TrayState.Curry;
             var curry = Instantiate(m_curry);
             CookedFood = curry;
             curry.transform.position = m_foodPosision2.position;
@@ -79,6 +81,7 @@ public class Tray : MonoBehaviour
         }
         else if (m_trayIndexList.SequenceEqual(fishsetStuffIndex))
         {
+            m_trayState = TrayState.Fishset;
             var fishset = Instantiate(m_Fishset);
             CookedFood = fishset;
             fishset.transform.position = m_foodPosision2.position;
@@ -86,6 +89,7 @@ public class Tray : MonoBehaviour
         }
         else if (m_trayIndexList.SequenceEqual(gyudonStuffIndex))
         {
+            m_trayState = TrayState.Gyudon;
             var gyudon = Instantiate(m_gyudon);
             CookedFood = gyudon;
             gyudon.transform.position = m_foodPosision2.position;
@@ -93,6 +97,7 @@ public class Tray : MonoBehaviour
         }
         else if (m_trayIndexList.SequenceEqual(sushiStuffIndex))
         {
+            m_trayState = TrayState.Sushi;
             var sushi = Instantiate(m_sushi);
             CookedFood = sushi;
             sushi.transform.position = m_foodPosision2.position;
@@ -112,8 +117,17 @@ public class Tray : MonoBehaviour
         }
     }
 
+    public void SuccessReset()
+    {
+        m_trayState = TrayState.None;
+        Destroy(CookedFood);
+        CookedFood = null;
+    }
+
     public void ResetTray()
     {
+        m_trayState = TrayState.None;
+
         if (CookedFood) 
         {
             if (CookedFood.CompareTag("Ramen")) ScoreManager.Instance.TotalLoss += CookedFood.GetComponent<Ramen>().FoodPrice;
