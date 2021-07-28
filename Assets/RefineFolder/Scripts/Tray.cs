@@ -45,6 +45,8 @@ public class Tray : MonoBehaviour
 
     public void AddFoodstuffs(GameObject foodstuff)
     {
+        if (m_trayCount >= 3) return;
+
         var stuff = Instantiate(foodstuff);
         m_trayObjectList.Add(stuff);
         var stuffIndex = stuff.GetComponent<FoodstuffBase>().foodstuffData.Index;

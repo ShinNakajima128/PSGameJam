@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5a83b84174392409d1af969f4d274e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_stealMoney: 1000
+  m_stealMoney: 3000
   m_alert: {fileID: 4865152971138320690}
   m_Arrested: {fileID: 4865152970511954119}
   m_limitSlider: {fileID: 4865152971299625897}
@@ -767,8 +767,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208, y: 394}
-  m_SizeDelta: {x: 480, y: 20}
+  m_AnchoredPosition: {x: 191.6, y: 394}
+  m_SizeDelta: {x: 463.63416, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4865152971299625897
 MonoBehaviour:
