@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2193256612243382346}
+  - component: {fileID: -750894104377367882}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-750894104377367882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193256612243382347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac02100ee64bb443ab5da245faebde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodstuffData: {fileID: 11400000, guid: 1a10aec5e6d0012438cd230cfad0e2a8, type: 2}
 --- !u!1 &2805800655224131170
 GameObject:
   m_ObjectHideFlags: 0
