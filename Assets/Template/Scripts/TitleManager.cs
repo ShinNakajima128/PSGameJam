@@ -6,7 +6,7 @@ public class TitleManager : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SoundManager.Instance.PlaySeByName("Enter1");
             LoadSceneManager.Instance.LoadEasyScene();
