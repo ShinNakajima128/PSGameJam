@@ -32,7 +32,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
             TotalScore = 0;
             TotalLoss = 0;
         }
-        else if (SceneManager.GetActiveScene().name == "GameScene")
+        else if (SceneManager.GetActiveScene().name == "RefineScene")
         {
             TotalScore = 0;
             TotalLoss = 0;
@@ -46,7 +46,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
             TotalScore = 0;
             TotalLoss = 0;
         }
-        else if (SceneManager.GetActiveScene().name == "GameScene")
+        else if (SceneManager.GetActiveScene().name == "RefineScene")
         {
             TotalScore = 0;
             TotalLoss = 0;
