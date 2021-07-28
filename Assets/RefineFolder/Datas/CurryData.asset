@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58267c992ec0b8f4a82c1e91fde2e9c7, type: 3}
-  m_Name: RamenData
+  m_Name: CurryData
   m_EditorClassIdentifier: 
-  m_foodName: Ramen
-  m_price: 800
+  m_foodName: Curry
+  m_price: 700
   m_foodstuffList:
-  - {fileID: 7353966207775223582, guid: d0f6fbf8c47ea354ca2e08899494467d, type: 3}
-  - {fileID: 4760939320487238441, guid: 23065f8c25d42784a8055665e6773e1e, type: 3}
+  - {fileID: 4169632788840203243, guid: fc1bafe05f793314991106bce42134d1, type: 3}
   - {fileID: 6921571945782835189, guid: 2fb075662e443ae418d92ca4072b0903, type: 3}
+  - {fileID: 5111510219956596085, guid: 159901bdf25523d4ba507a505f2d2aaf, type: 3}
