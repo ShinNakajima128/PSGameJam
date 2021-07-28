@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 192894113}
   - component: {fileID: 192894112}
   m_Layer: 5
-  m_Name: Make
+  m_Name: Cooking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,7 +950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 527.4, y: -323}
+  m_AnchoredPosition: {x: 412, y: -269}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &192894112
@@ -995,7 +995,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 192894113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 371633558}
+        m_MethodName: Cooking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192894113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,10 +1385,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ded4c1c399eb640b137f9da7c16f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ramen: {fileID: 846686764}
+  m_curry: {fileID: 775239803}
+  m_Fishset: {fileID: 1400719306}
+  m_gyudon: {fileID: 8375365825175130382, guid: 61c229219fe336a45b70e45bc8509152,
+    type: 3}
+  m_sushi: {fileID: 6863384540663005548, guid: 58ce90e4d015da34c94e6ab2d6d433ed, type: 3}
   m_foodPosision1: {fileID: 1803179417}
   m_foodPosision2: {fileID: 567996926}
   m_foodPosision3: {fileID: 47849152}
   m_totalCost: 0
+  m_trayState: 0
   m_trayObjectList: []
   m_trayIndexList: 
 --- !u!1 &399050918
@@ -1814,7 +1832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 717, y: -323}
+  m_AnchoredPosition: {x: 588.3, y: -269}
   m_SizeDelta: {x: 160, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677864473
@@ -2064,7 +2082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749366374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.475, y: 1.2, z: 0}
+  m_LocalPosition: {x: 7.475, y: 0.7, z: 0}
   m_LocalScale: {x: 0.46848816, y: 1.1281222, z: 1}
   m_Children:
   - {fileID: 46633101}
@@ -2166,6 +2184,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760658714}
   m_CullTransparentMesh: 0
+--- !u!1 &775239803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6447899257836096023, guid: a28fa78b3d6efd14c92c16dcc6ae9cd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 318742094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787167924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2427,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796990240}
   m_CullTransparentMesh: 0
+--- !u!1 &846686764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2526721321281809151, guid: e0191262b8246de47941dbb8ce0209a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 434449314}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983251409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +3687,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1400719306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3057897752741263630, guid: ce89d27c4d94c5d499a50222b6672d87,
+    type: 3}
+  m_PrefabInstance: {fileID: 156200199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1430498115
 GameObject:
   m_ObjectHideFlags: 0

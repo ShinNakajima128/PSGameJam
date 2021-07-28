@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1310431904197248275}
   m_Layer: 0
   m_Name: Curry
-  m_TagString: Untagged
+  m_TagString: Curry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
