@@ -53,9 +53,9 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         if (Instance != null)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
-            if (SceneManager.GetActiveScene().name == "GameScene")
+            if (SceneManager.GetActiveScene().name == "Title")
             {
-                PlayBgmByName("Main");
+                StopBgm();
             }
             //else if (SceneManager.GetActiveScene().name == "RefineScene")
             //{
@@ -75,8 +75,8 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
         {
             switch (SceneManager.GetActiveScene().name)
             {
-                case "GameScene":
-                    PlayBgmByName("Main");
+                case "Title":
+                    StopBgm();
                     break;
                 //case "RefineScene":
                 //    PlayBgmByName("Main");
