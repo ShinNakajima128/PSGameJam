@@ -45,7 +45,7 @@ public class Tray : MonoBehaviour
 
     public void AddFoodstuffs(GameObject foodstuff)
     {
-        if (m_trayCount >= 3) return;
+        if (m_trayCount >= 3 || m_trayState != TrayState.None) return;
 
         var stuff = Instantiate(foodstuff);
         m_trayObjectList.Add(stuff);
