@@ -2556,7 +2556,7 @@ MonoBehaviour:
   - {fileID: 221062482}
   m_clientState: 0
   m_tray: {fileID: 371633558}
-  m_offTimer: 2
+  m_offTimer: 0.5
 --- !u!1 &479938317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,7 +4897,7 @@ MonoBehaviour:
   - {fileID: 1632648714}
   m_clientState: 0
   m_tray: {fileID: 371633558}
-  m_offTimer: 2
+  m_offTimer: 0.5
 --- !u!1001 &1110739883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8413,7 +8413,7 @@ MonoBehaviour:
   - {fileID: 1472268723}
   m_clientState: 0
   m_tray: {fileID: 371633558}
-  m_offTimer: 2
+  m_offTimer: 0.5
 --- !u!1 &1874980520
 GameObject:
   m_ObjectHideFlags: 0

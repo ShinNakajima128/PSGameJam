@@ -29,21 +29,21 @@ public class ClientManager : MonoBehaviour
         if (!m_client1.activeSelf && !isClientReserve1)
         {
             isClientReserve1 = true;
-            var timer = Random.Range(3, 7);
+            var timer = Random.Range(3, 6);
             StartCoroutine(OnClient(1, timer, m_client1));
         }
 
         if (!m_client2.activeSelf && !isClientReserve2)
         {
             isClientReserve2 = true;
-            var timer = Random.Range(3, 7);
+            var timer = Random.Range(3, 6);
             StartCoroutine(OnClient(2, timer, m_client2));
         }
 
         if (!m_client3.activeSelf && !isClientReserve3)
         {
             isClientReserve3 = true;
-            var timer = Random.Range(3, 7);
+            var timer = Random.Range(3, 6);
             StartCoroutine(OnClient(3, timer, m_client3));
         }
     }
