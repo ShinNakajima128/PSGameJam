@@ -19,6 +19,17 @@ public class ResultManager : MonoBehaviour
     [SerializeField] int m_totalLosses = 0;
     [SerializeField] int m_totalResult = 0;
 
+    [Header("デバッグ用")]
+    [SerializeField] bool isDebug = false;
+    [SerializeField] int m_testTotal = 100;
+
+    public int TotalResult => m_totalResult;
+    public static ResultManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         m_selectPanel.SetActive(false);
@@ -75,6 +86,30 @@ public class ResultManager : MonoBehaviour
 
         yield return new WaitForSeconds(m_ViewTimer);
 
+        if (isDebug)
+        {
+            m_totalResult = m_testTotal;
+        }
+
+        RankingManager.Instance.SetScoreOfCurrentPlay(m_totalResult);
+
+        yield return StartCoroutine(RankingSubmit());
+
         m_selectPanel.SetActive(true);
+    }
+
+    IEnumerator RankingSubmit()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        while (true)
+        {
+            if (RankingManager.Instance.FInishedProcess)
+            {
+                Debug.Log(RankingManager.Instance.FInishedProcess);
+                yield break;
+            }
+            yield return null;
+        }
     }
 }
